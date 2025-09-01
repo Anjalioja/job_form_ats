@@ -41,6 +41,7 @@ job_form_ats/
 │-- requirements.txt
 │-- README.md
 ```
+![Job Form Screenshot](image.png)
 
 ## Notes
 - Allowed resume formats: .pdf, .doc, .docx, .jpg, .jpeg, .png
