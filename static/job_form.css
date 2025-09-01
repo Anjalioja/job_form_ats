@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(235, 235, 235);
+  background-size: 200px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.content {
+  max-width: 700px;
+  padding: 40px 30px;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 30px;
+  box-shadow: 4px 3px 5px rgba(21, 18, 18, 0.1);
+  border-radius: 16px;
+}
+
+.content h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.form_container {
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.form_control {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline-color: #0d6efd;
+}
+
+input, select, textarea {
+  padding: 8px 10px;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.textarea_control {
+  grid-column: 1 / span 2;
+}
+
+.textarea_control textarea {
+  width: 100%;
+}
+
+@media (max-width: 460px) {
+  .textarea_control {
+    grid-column: 1 / span 1;
+  }
+}

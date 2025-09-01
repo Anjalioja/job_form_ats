@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card shadow-sm p-4" style="max-width:420px">
+  <h3>🔐 Admin Login</h3>
+  <form method="post">
+    <div class="mb-3">
+      <label class="form-label">Password</label>
+      <input class="form-control" type="password" name="password" required>
+    </div>
+    <button class="btn btn-primary">Login</button>
+  </form>
+  <small class="text-muted d-block mt-2">Default: admin123 (change via ADMIN_PASSWORD env var)</small>
+</div>
+{% endblock %}

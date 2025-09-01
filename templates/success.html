@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card shadow-sm p-4">
+  <h2>✅ Application Submitted!</h2>
+  <p>Your Application ID is: <strong>{{ app_id }}</strong></p>
+  <p>We have received your application. You can track your status here:</p>
+  <a class="btn btn-outline-primary" href="{{ url_for('track') }}">Track Application</a>
+</div>
+{% endblock %}

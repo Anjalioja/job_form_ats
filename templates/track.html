@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card shadow-sm p-4">
+  <h3>🔎 Track Your Application</h3>
+  <form method="post" class="row g-3 my-2">
+    <div class="col-md-6">
+      <label class="form-label">Application ID</label>
+      <input class="form-control" name="app_id" placeholder="e.g., JOB-1A2B3C4D" required>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Email</label>
+      <input class="form-control" name="email" type="email" placeholder="your@email.com" required>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary">Check Status</button>
+    </div>
+  </form>
+
+  {% if result %}
+  <hr>
+  <h5>Status: <span class="badge bg-info">{{ result['status'] }}</span></h5>
+  <p><strong>Name:</strong> {{ result['first_name'] }} {{ result['last_name'] }}</p>
+  <p><strong>Job Role:</strong> {{ result['job_role'] }}</p>
+  <p><strong>Submitted On:</strong> {{ result['created_at'] }}</p>
+  {% if result['resume_filename'] %}
+    <p><a class="btn btn-outline-secondary" href="{{ url_for('uploads', filename=result['resume_filename']) }}" target="_blank">Download Resume</a></p>
+  {% endif %}
+  {% endif %}
+</div>
+{% endblock %}
